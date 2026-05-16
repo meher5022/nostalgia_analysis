@@ -55,13 +55,13 @@ The first dataset examines **Fujifilm Instax sales transactions** — a product 
 
 **What the data reveals:**
 
-- **Monthly & Yearly Quantity Trends** examine whether Instax demand is increasing steadily, stabilizing, or responding to broader cultural shifts. Growth in these trends reflects more than consumer spending, it indicates a growing preference for tangible experiences. 
+- **Monthly Quantity Trends** examine whether Instax demand is increasing steadily, stabilizing, or responding to broader cultural shifts. Growth in these trends reflects more than consumer spending, it indicates a growing preference for tangible experiences. 
 
 ![monthly quantity sold](visuals/monthly_quantity_sold.png)
 
 - **Camera vs. Film Sales Ratio** is the most telling KPI of all. A high film-to-camera ratio means people who already *own* the camera keep *using* it. They aren't just buying a novelty object and letting it collect dust — they're committing to analog photography.
 
-![Camera vs Film](visuals/film_vs_camera_share.png)
+![film vs camera](visuals/film_vs_camera_share.png)
 
 A high film-to-camera ratio means people who already own the camera keep using it.
 
@@ -79,6 +79,8 @@ The second dataset turns inward — to the words people use on Reddit when they 
 
 - **Sentiment Distribution** answers a blunt question: when people talk about Instagram and addiction in the same breath, are they mostly positive, negative, or neutral? A skew toward negativity here anchors the emotional backdrop against which nostalgia must be understood.
 
+![sentiment_distribution](visuals/sentiment_distribution.png)
+
 - **Theme Frequency Analysis** tracks five core themes across posts:
   - `Addiction` — dopamine, compulsive behaviour, inability to stop
   - `Overstimulation` — burnout, anxiety, overwhelm
@@ -87,6 +89,8 @@ The second dataset turns inward — to the words people use on Reddit when they 
   - `Digital Detox` — the desire to quit, delete, go offline
 
 - **Top Words by Sentiment** and the **Word Cloud** strip away structure and let the raw vocabulary speak. When "dopamine," "algorithm," "anxiety," and "attention" dominate the language of negative posts, the picture becomes clear: people aren't just bored. They feel *manipulated*.
+
+![wordcloud_discussions](visuals/wordcloud_discussions.png)
 
 > **Hypothesis Link:** The emotional exhaustion surfacing in online discourse creates the psychological conditions for nostalgia — a retreat toward simpler, slower, more controllable experiences.
 
@@ -106,16 +110,22 @@ This is where the hypothesis becomes testable at scale.
   - **March 2020** — Pandemic lockdowns. The world went online, all at once.
   - **January 2021** — The TikTok Boom. Short-form video rewired attention spans globally.
   - **January 2023** — The AI Boom. Suddenly, even *content creation* felt automated.
+ 
+![google_trends_over_time](visuals/google_trends_over_time.png)
 
   Each of these events represents an escalation in digital saturation. Watch what the nostalgia lines do in response.
 
 - **Digital Fatigue vs. Nostalgia Composite Scores** condense the complexity into two clean trend lines. The key question: do they move *together*? Does one *lead* the other?
 
+![fatigue_vs_nostalgia](visuals/fatigue_vs_nostalgia.png)
+
 - **Correlation Heatmap** reveals the full relationship matrix between all tracked terms. Does "Brain Rot" correlate with "Film Camera"? Does "Doomscrolling" move with "Vintage"?
+
+![correlation_heatmap](visuals/correlation_heatmap.png)
 
 - **Doomscrolling vs. Vintage Regression** isolates this specific relationship — two terms that could not sound more different, plotted against each other to see if they share a hidden rhythm.
 
-- **Yearly Cultural Trend Change** shows the *acceleration* of each category, not just their levels — identifying which force is growing fastest and whether the gap between fatigue and nostalgia is narrowing or widening.
+![doomscrolling_vs_vintage](visuals/doomscrolling_vs_vintage.png)
 
 > **Hypothesis Link:** If nostalgia search interest demonstrably rises in the months following spikes in digital fatigue, the hypothesis moves from compelling to evidenced.
 
