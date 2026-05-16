@@ -24,7 +24,7 @@ Instant photography. Film cameras. Vintage clothing. Y2K. 2000s nostalgia. These
 ├── insta_analysis.py          # Instagram sentiment & digital fatigue NLP
 ├── google_trends_analysis.py  # Google Trends: nostalgia vs. digital fatigue
 │
-├──  Output Charts/
+├──  visuals /
 │   ├── monthly_quantity_sold.png
 │   ├── monthly_revenue_trend.png
 │   ├── yearly_quantity_sold.png
@@ -57,7 +57,13 @@ The first dataset examines **Fujifilm Instax sales transactions** — a product 
 
 - **Monthly & Yearly Quantity Trends** examine whether Instax demand is increasing steadily, stabilizing, or responding to broader cultural shifts. Growth in these trends reflects more than consumer spending, it indicates a growing preference for tangible experiences. 
 
+![monthly quantity sold](visuals/monthly_quantity_sold.png)
+
 - **Camera vs. Film Sales Ratio** is the most telling KPI of all. A high film-to-camera ratio means people who already *own* the camera keep *using* it. They aren't just buying a novelty object and letting it collect dust — they're committing to analog photography.
+
+![Camera vs Film](visuals/film_vs_camera_share.png)
+
+A high film-to-camera ratio means people who already own the camera keep using it.
 
 > **Hypothesis Link:** Rising Instax sales, especially repeat film purchases, suggest consumers are actively investing in analog experiences — not just fantasising about them.
 
