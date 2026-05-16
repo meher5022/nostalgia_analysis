@@ -1,7 +1,6 @@
-
 [README.md](https://github.com/user-attachments/files/27767517/README.md)
 
-# 🎥🎞️ Nostalgic Aesthetics as Responses to Modern Online Life
+# 🎥🎞️ Nostalgic Aesthetics as Responses to Modern Hyper-Online Life
 ### An Exploratory Data Analysis Project
 
 ---
@@ -18,11 +17,7 @@ Instant photography. Film cameras. Vintage clothing. Y2K. 2000s nostalgia. These
 ##  Project Structure
 
 ```
- project/
-│
-├── sales_analysis.py          # Instax / analog camera sales trends
-├── insta_analysis.py          # Instagram sentiment & digital fatigue NLP
-├── google_trends_analysis.py  # Google Trends: nostalgia vs. digital fatigue
+ nostalgia/
 │
 ├──  visuals /
 │   ├── monthly_quantity_sold.png
@@ -41,6 +36,17 @@ Instant photography. Film cameras. Vintage clothing. Y2K. 2000s nostalgia. These
 │   ├── correlation_heatmap.png
 │   ├── doomscrolling_vs_vintage.png
 │   └── yearly_cultural_trend_change.png
+│
+├──  src /
+│   ├── google_trends_analysis.py # Google Trends: nostalgia vs. digital fatigue
+│   ├── insta_analysis.py # Instagram sentiment & digital fatigue NLP
+│   ├── sales_analysis.py  # Instax / analog camera sales trends
+│
+├──  data /
+│   ├── insta_sentiment_data.csv
+│   ├── instax_sales_transaction_data.csv
+│   ├── nostalgia.csv
+
 ```
 
 ---
@@ -63,7 +69,7 @@ The first dataset examines **Fujifilm Instax sales transactions** — a product 
 
 ![film vs camera](visuals/film_vs_camera_share.png)
 
-A high film-to-camera ratio means people who already own the camera keep using it.
+A high film-to-camera ratio of 7.86 suggests people continued consumer engagement with analog photography.
 
 > **Hypothesis Link:** Rising Instax sales, especially repeat film purchases, suggest consumers are actively investing in analog experiences — not just fantasising about them.
 
@@ -71,7 +77,7 @@ A high film-to-camera ratio means people who already own the camera keep using i
 
 ### Act II — The Algorithm Knows You're Tired: Instagram Sentiment Analysis
 
-*"The place where people go to escape boredom has itself become a source of exhaustion."*
+*The place where people go to escape boredom has itself become a source of exhaustion.*
 
 The second dataset turns inward — to the words people use on Reddit when they talk about Instagram. Using **NLP, TF-IDF analysis, and theme-based classification**, this analysis maps the emotional texture of online discourse around social media addiction and digital fatigue.
 
@@ -81,16 +87,23 @@ The second dataset turns inward — to the words people use on Reddit when they 
 
 ![sentiment_distribution](visuals/sentiment_distribution.png)
 
-- **Theme Frequency Analysis** tracks five core themes across posts:
-  - `Addiction` — dopamine, compulsive behaviour, inability to stop
-  - `Overstimulation` — burnout, anxiety, overwhelm
-  - `Attention Problems` — shortened focus, inability to concentrate
-  - `Short-Form Content` — reels, scrolling, algorithmic feeds
-  - `Digital Detox` — the desire to quit, delete, go offline
-
 - **Top Words by Sentiment** and the **Word Cloud** strip away structure and let the raw vocabulary speak. When "dopamine," "algorithm," "anxiety," and "attention" dominate the language of negative posts, the picture becomes clear: people aren't just bored. They feel *manipulated*.
 
 ![wordcloud_discussions](visuals/wordcloud_discussions.png)
+
+**Top Words in Negative Posts**
+ 
+| Rank | Word | Frequency |
+|------|------|-----------|
+| 1 | time | 142 |
+| 2 | addiction | 128 |
+| 3 | reels | 111 |
+| 4 | use | 104 |
+| 5 | phone | 74 |
+| 6 | obsessed | 66 |
+| 7 | excessive | 62 |
+ 
+The vocabulary of negative posts is clinically precise. *Addiction* and *obsessed* point to compulsive behaviour; *reels* pins the frustration to Instagram's short-form algorithm. *Excessive* and *time* together suggest the dominant complaint is not just what people are consuming, but how much of their lives it is taking. This is the language of people who feel they have lost control
 
 > **Hypothesis Link:** The emotional exhaustion surfacing in online discourse creates the psychological conditions for nostalgia — a retreat toward simpler, slower, more controllable experiences.
 
@@ -102,18 +115,16 @@ The second dataset turns inward — to the words people use on Reddit when they 
 
 The third and most macro-level dataset uses **Google Trends data** to plot search interest over time across two competing cultural forces: **Digital Fatigue** (Brain Rot, AI Slop, Doomscrolling) and **Nostalgia** (Film Camera, Vintage, Retro Style, Y2K Aesthetic, 2000s).
 
-This is where the hypothesis becomes testable at scale.
-
 **What the data reveals:**
 
 - **Google Trends Over Time** plots all search terms against three cultural fault lines:
   - **March 2020** — Pandemic lockdowns. The world went online, all at once.
   - **January 2021** — The TikTok Boom. Short-form video rewired attention spans globally.
-  - **January 2023** — The AI Boom. Suddenly, even *content creation* felt automated.
+  - **January 2023** — The AI Boom. *content creation* becomes automated.
  
 ![google_trends_over_time](visuals/google_trends_over_time.png)
 
-  Each of these events represents an escalation in digital saturation. Watch what the nostalgia lines do in response.
+  Each of these events represents an escalation in digital saturation. the nostalgia lines act in response.
 
 - **Digital Fatigue vs. Nostalgia Composite Scores** condense the complexity into two clean trend lines. The key question: do they move *together*? Does one *lead* the other?
 
@@ -126,6 +137,48 @@ This is where the hypothesis becomes testable at scale.
 - **Doomscrolling vs. Vintage Regression** isolates this specific relationship — two terms that could not sound more different, plotted against each other to see if they share a hidden rhythm.
 
 ![doomscrolling_vs_vintage](visuals/doomscrolling_vs_vintage.png)
+
+---
+
+### 📈 Google Trends — Key Findings
+
+**Fastest Growing Term: Vintage (+46 points)**
+
+Of all the terms tracked, *Vintage* recorded the highest total growth across the dataset — a net increase of 46 index points from start to finish. This is not a spike. It is a sustained, structural climb that outlasted every short-lived aesthetic trend around it.
+
+**Average Yearly Increase by Term**
+
+| Search Term | Avg. Yearly Increase |
+|---|---|
+| Vintage | +3.05 |
+| 2000s | +3.05 |
+| Brain rot | +1.93 |
+| Digital Nostalgia | +1.71 |
+| Nostalgia (composite) | +1.47 |
+| Analog Nostalgia | +1.31 |
+| Fatigue / Digital Fatigue | +0.76 |
+| Retro style | +0.73 |
+| Y2K aesthetic | +0.36 |
+| AI slop | +0.25 |
+| Film Camera | +0.14 |
+| Doomscrolling | +0.12 |
+
+The table tells a striking story: **nostalgia-adjacent terms are growing at 2–4× the rate of digital fatigue terms.** Even *Brain Rot* — 2025's breakout slang for algorithmic overstimulation — grows at a slower average rate than *Vintage* or *2000s*. The emotional response appears to be outpacing the problem it is responding to.
+
+**Peak Search Years**
+
+| Search Term | Peak Year | Peak Score |
+|---|---|---|
+| Vintage | 2026 | 72 |
+| 2000s | 2026 | 70 |
+| Brain rot | 2025 | 100 |
+| Doomscrolling | 2025 | 2 |
+| Retro style | 2018 | 94 |
+| Y2K aesthetic | 2026 | 8 |
+| Film Camera | 2021 | 6 |
+| AI slop | 2026 | 9 |
+
+ the nostalgia terms — *Vintage*, *2000s*, *Analog Nostalgia*, *Digital Nostalgia*, *Y2K* — is peaking in 2026. *Brain Rot* peaked at a score of 100 in 2025 — the maximum possible on Google Trends — confirming that digital fatigue discourse hit a cultural ceiling  one year before nostalgia terms, suggesting a lag correlation between the terms. 
 
 > **Hypothesis Link:** If nostalgia search interest demonstrably rises in the months following spikes in digital fatigue, the hypothesis moves from compelling to evidenced.
 
@@ -176,9 +229,11 @@ This project does not claim that everyone buying a disposable camera is having a
 
 **The pattern that emerges:**
 
-1. Digital fatigue is real, measurable, and growing — visible in both the language people use online and the search terms they reach for when overwhelmed.
-2. Analog and retro consumption is rising — not as a passing aesthetic phase, but as a sustained purchasing and searching behaviour.
-3. The timing is suggestive — cultural accelerators like the pandemic, the TikTok boom, and the AI wave each appear to precede upticks in nostalgia-oriented searches and purchases.
+**1. Digital fatigue is real, measurable, and linguistically specific :** It shows up not just as a vague feeling but as precise vocabulary — addiction, reels, obsessed, excessive — repeated consistently across thousands of posts.
+
+**3. The analog and retro response is sustained, not seasonal :** A film-to-camera ratio of 7.86 means repeat purchases, not impulse buys. Vintage growing at +3.05 points per year, and still peaking in 2026, means this is not a trend that peaked and faded. It is still climbing.
+
+**4. The timing follows a logic :** Brain Rot hits the ceiling of 100 in 2025. Vintage, 2000s, and the nostalgia composite peak in 2026. The cultural accelerators — pandemic, TikTok, AI — each precede measurable upticks in retro-oriented behaviour. this sequence is consistent.
 
 ---
 
@@ -204,8 +259,7 @@ Charts will be saved as `.png` files in the project root.
 
 ## Author
 
-**Meher Vaswani**
-Data & Research | Exploring the cultural intersections of technology, emotion, and consumer behaviour.
+**Meher Vaswani** |
+Data Scientist
 
 ---
-
